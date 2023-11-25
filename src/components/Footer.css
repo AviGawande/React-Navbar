@@ -1,0 +1,13 @@
+/* Footer.css */
+
+.footer {
+  background-color: #252222;
+  color: white;
+  text-align: center;
+  padding: auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* You can add more styles based on your design preferences */

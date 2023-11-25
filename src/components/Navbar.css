@@ -1,0 +1,73 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-button {
+  display: none; /* Hide the button by default */
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: cursive;
+  /* justify-content: right; */
+}
+
+li {
+  margin-right: 0;
+  margin-left: 20px;
+  cursor: pointer;
+  justify-content: right;
+}
+
+li:hover {
+  text-decoration: underline;
+  color: coral;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .toggle-button {
+    display: block; /* Show the button for small devices */
+  }
+
+  .nav-links {
+    display: none; /* Hide the navbar links by default for small devices */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: right;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show the navbar links when the button is clicked */
+  }
+}
+
+/* Hide toggle button for larger screens */
+@media (min-width: 601px) {
+  .toggle-button {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important; /* Ensure navbar links are visible for larger screens */
+  }
+}
